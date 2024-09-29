@@ -1,0 +1,353 @@
+/*
+    Fait par : Samuel A. Thifault
+    Date : 18 Avril 2024
+    M-A-J : Null
+*/
+
+/* Reset le style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour le corps (body) :
+- Largeur fixe de 974px pour le contenu principal
+- Police de caractères Arial ou sans-serif utilisée pour le texte
+- Couleur de fond bleu foncé (#0a0f16)
+- Couleur du texte gris clair (#ccc)
+- Hauteur de ligne de 1.6 pour un espacement confortable entre les lignes de texte
+- Marge automatique pour centrer le contenu horizontalement
+- Positionnement de l'image de fond centré
+*/
+body {
+    width: 974px;
+    font-family: Arial, sans-serif;
+    background-color: #0a0f16;
+    color: #ccc;
+    line-height: 1.6;
+    margin: auto; 
+    background-image: url(images/background.png);
+    background-size: cover; /* Étendre l'image de fond pour couvrir tout l'élément */
+    background-position: center;    
+}
+
+/* Ajoute une image comme header */
+header {
+    background: url('images/wowBanner.png') no-repeat center center/cover;
+    background-size: 99%; /* Couvrir tout le conteneur */
+    background-position: center;
+    height: 250px; 
+}
+
+/*  -------------- TEXTE EN RÉSERVE POUR FAIRE DES TEST ----------------
+#Haut-de-page {
+    background-image: url('https://binaryfortressdownloads.com/Download/WPF/Images/1078/WallpaperFusion-world-of-warcraft-Original-5760x1080.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}   --------------------------------------------------------------------*/
+
+/* Styles pour la navigation (nav) :
+- Aucune couleur de texte définie
+- Aucune couleur de fond définie
+- Centre le texte horizontalement
+- Remplissage de 10px en haut et en bas
+*/
+nav {
+    color: none;
+    background-color: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Styles pour la liste non ordonnée (ul) à l'intérieur de la navigation :
+- Pas de puces
+*/
+nav ul {
+    list-style: none;
+}
+
+/* Styles pour les éléments de liste (li) à l'intérieur de la navigation :
+- Affichage en ligne pour les éléments de liste
+- Marge à droite de 20px pour espacer les éléments
+- Ajoute une ombre de texte légère pour la profondeur
+*/
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    text-shadow: 1.5px 1.5px 2px #000000;
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans la navigation :
+- Aucune décoration de texte (pas de soulignement)
+- Couleur du texte gris clair (#ccc)
+- Police en gras
+- Transition en douceur pour la couleur
+*/
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans la navigation au survol :
+- Changement de couleur du texte en dorée (#e6a00f) au survol
+*/
+nav ul li a:hover {
+    color: #e6a00f; 
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans la navigation au clic :
+- Changement de couleur du texte en jaune (#ffd900) au clic
+- Transition en douceur pour la couleur
+*/
+nav ul li a:active {
+    color: #ffd900; 
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans la navigation lorsqu'ils sont actifs :
+- Changement de couleur du texte en blanc (#fff) pour le lien actif
+-------------------------------- BUG ----------------------------------------------------------------------------
+nav ul li a.active { 
+    color: #fff; 
+}*/
+
+
+/* Style du contenu principal de la page :
+- Ajout d'un padding de 30px pour l'espace intérieur
+- Marge de 20px en haut et en bas, et automatiquement centré horizontalement
+- Largeur maximale de 100% pour s'adapter à la largeur de l'écran
+- Coins arrondis avec un rayon de 8px
+- Ombre légère pour ajouter de la profondeur
+ */
+main {
+    padding: 30px;
+    background-color: #1416191a;
+    margin: 20px auto;
+    max-width: 100%;
+    /*border: 1px solid rgba(20, 22, 25); ----- EN RÉSERVE POUR TEST -----*/
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px #0a0f16;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Styles des titres h1 et h2 :
+- Ajout d'un padding de 10px en haut et en bas du texte
+- Ajout de 20px de marge en haut et en bas des titres
+- Centre le texte horizontalement
+*/
+h1, h2 {
+    padding: 10px 0; 
+    margin: 20px 0; 
+    /*text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 1); ----- EN RÉSERVE POUR TEST ----- */
+    text-align: center;
+}
+
+/* Styles spécifiques pour h2 :
+- Couleur dorée pour les titres
+- Ajout d'une ombre de texte pour donner de la profondeur
+*/
+h2 {
+    color: #e6a00f; 
+    text-shadow: 3px 3px 2px #000000;
+}
+
+/* Styles spécifiques pour h1 :
+- Couleur dorée pour les titres
+- Taille de police de 50px
+- Police de caractères Georgia ou 'Times New Roman', Times, serif
+- Ajout d'une ombre de texte pour donner de la profondeur
+*/
+h1{
+    /*border-bottom: 1px solid #e6a00f;  ----- EN RÉSERVE POUR TEST ----- */
+    color: #fff; 
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 2px #000000;
+}
+ 
+/* Styles pour les paragraphes (p) et les éléments d'article :
+- Centre le texte horizontalement
+- Ajoute une ombre de texte légère pour la profondeur
+*/
+p, article {
+    text-align: center;
+    text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles spécifiques pour les éléments d'article :
+- Fond sombre pour l'article
+- Remplissage de 20px pour l'espace intérieur
+- Marge supplémentaire de 20px en haut
+- Coins arrondis avec un rayon de 8px
+- Bordure de 1px solide de couleur dorée
+- Ombre légère pour ajouter de la profondeur
+*/
+article {
+    background-color: #181a1f; 
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #e6a00f; 
+    box-shadow: 0 4px 8px #00000080;
+}
+
+/* Styles pour le pied de page (footer) :
+- Aucune couleur de fond définie 
+- Couleur du texte gris foncé (#666)
+- Centre le texte horizontalement
+- Marge supplémentaire de 20px en haut
+- Coins arrondis avec un rayon de 8px
+*/
+footer {
+    background-color: none;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Styles pour la liste non ordonnée (ul) à l'intérieur du pied de page :
+- Pas de puces
+- Remplissage intérieur de 20px
+*/
+footer ul {
+    list-style: none;
+    padding: 20px;
+}
+
+/* Styles pour les éléments de liste (li) à l'intérieur du pied de page :
+- Affichage en ligne pour les éléments de liste
+- Marge à droite de 10px pour espacer les éléments
+*/
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans le pied de page :
+- Couleur du texte gris foncé (#888)
+- Aucune décoration de texte (pas de soulignement)
+- Transition de couleur de 0.3s pour une animation fluide
+- Hauteur fixe de 30px
+*/
+footer ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    height: 30px;
+}
+
+/* Styles pour les liens (a) à l'intérieur des éléments de liste (li) dans le pied de page au survol :
+- Changement de couleur du texte en couleur bleu foncé(#0a0f16)
+*/
+footer ul li a:hover {
+    color: #0a0f16;
+}
+
+/* Styles pour la classe .PVP :
+- Utilise Flex pour un agencement flexible des éléments.
+- Justifie le contenu avec un espace entre les éléments.
+- Alignement des éléments au début du conteneur.
+- Marge supérieure de 20px pour espacer du contenu précédent.
+*/
+.PVP {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-top: 20px;
+    
+}
+
+/* Styles pour la classe .PVE :
+- Utilise Flex similairement à .PVP 
+- Pas de marge supérieure ajoutée ici contrairement à .PVP.
+*/
+.PVE {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+/* Styles pour les éléments <article> et <aside> :
+- Flex: 1 pour que les deux éléments prennent la même largeur.
+- Padding de 10px autour du contenu pour un espace intérieur.
+*/
+article, aside {
+    flex: 1; 
+    padding: 10px; 
+}
+
+/* Styles spécifiques pour les éléments <aside> :
+- Largeur maximale fixée à 300px.
+- Marge gauche de 20px pour créer un espace entre <article> et <aside>.
+- Marge supérieure de 8px pour aligner verticalement avec d'autres contenus.
+*/
+aside {
+    max-width: 300px; 
+    margin-left: 20px; 
+    margin-top: 8px;
+}
+
+/* Styles pour l'iframe dans <aside> :
+- Bordure solide de 1px avec la couleur #e6a00f.
+- Ombre portée pour ajouter de la profondeur visuelle.
+- Dimensions fixées pour largeur et hauteur.
+- Display block pour l'affichage en block.
+- Marges automatiques pour centrer horizontalement dans son conteneur.
+- Bordures arrondies pour adoucir les coins.
+*/
+aside iframe {
+    border: 1px solid #e6a00f; 
+    box-shadow: 0 4px 8px #00000080; 
+    width: 300px;
+    height: 250px;
+    display: flexbox;
+    margin: 0 auto; 
+    border-radius: 8px;
+} 
+
+/* Styles pour la classe .expansionVideo :
+- Dimensions spécifiques pour largeur et hauteur.
+- Bordure et ombre portée identiques à celles de l'iframe dans <aside>.
+- Bordures arrondies pour une apparence cohérente avec l'iframe.
+*/
+.expansionVideo {
+    width: 910px;
+    height: 300px;
+    border: 1px solid #e6a00f; 
+    box-shadow: 0 4px 8px #00000080; 
+    border-radius: 8px;
+}
+
+/* Styles pour la classe .expansionImage :
+- Display block pour l'affichage en block.
+- Marges automatiques pour centrer l'image horizontalement.
+- Bordures arrondies pour un design visuellement agréable.
+*/
+.expansionImage {
+    border-radius: 8px;
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Styles pour le texte dans les classes .PVPtext et .PVEtext :
+- Justification du texte 
+*/
+.PVPtext{
+    text-align: justify;
+}
+
+.PVEtext{
+    text-align: justify;
+}
+
+
+
